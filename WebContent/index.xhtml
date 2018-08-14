@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>JSF Page</title>
+</h:head>
+<h:body>
+
+	<h:outputText value="Hello friend" />
+
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Nome:" />
+			<h:inputText maxlength="20" size="30" />
+
+			<h:outputLabel value="Senha:" />
+			<h:inputSecret maxlength="6" size="10" />
+
+			<h:outputLabel value="Observação:" />
+			<h:inputTextarea cols="20" rows="5" />
+
+			<h:outputLabel value="Interesses" />
+			<h:selectManyCheckbox>
+				<f:selectItem itemValue="1" itemLabel="Viagem" />
+				<f:selectItem itemValue="2" itemLabel="Cinema" />
+				<f:selectItem itemValue="3" itemLabel="Internet" />
+
+			</h:selectManyCheckbox>
+
+			<h:outputLabel value="Etado Civil:" />
+
+			<h:selectOneRadio>
+				<f:selectItem itemValue="1" itemLabel="Solteiro" />
+				<f:selectItem itemValue="2" itemLabel="Casado" />
+				<f:selectItem itemValue="3" itemLabel="Divorciado" />
+
+			</h:selectOneRadio>
+
+			<h:outputLabel value="Pais:" />
+			<h:selectOneMenu>
+				<f:selectItem itemValue="1" itemLabel="Australia" />
+				<f:selectItem itemValue="2" itemLabel="Brasil" />
+				<f:selectItem itemValue="3" itemLabel="Chile" />
+				<f:selectItem itemValue="4" itemLabel="Dinamarca" />
+				<f:selectItem itemValue="5" itemLabel="França" />
+				<f:selectItem itemValue="6" itemLabel="Hungria" />
+
+			</h:selectOneMenu>
+
+		</h:panelGrid>
+		<h:panelGrid columns="4">
+			<h:commandButton value="Gravar" />
+			<h:commandButton value="Buscar" />
+			<h:commandButton value="Editar" />
+			<h:commandButton value="Excluir" />
+
+			<h:commandLink value="voltar" />
+		</h:panelGrid>
+
+	</h:form>
+
+</h:body>
+</html>
